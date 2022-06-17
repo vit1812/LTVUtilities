@@ -16,7 +16,7 @@ extension UIViewController {
 
 extension UIView {
     
-    class func viewFromNib<Type>(nibName: String, bundle: Bundle? = nil) -> Type? {
+    public class func viewFromNib<Type>(nibName: String, bundle: Bundle? = nil) -> Type? {
         return UINib(nibName: nibName, bundle: bundle)
             .instantiate(withOwner: Type.self, options: nil)
             .first(where: {
@@ -30,7 +30,7 @@ extension UIView {
 
 extension Array {
     
-    subscript(safe index: Int) -> Element? {
+    public subscript(safe index: Int) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
     
