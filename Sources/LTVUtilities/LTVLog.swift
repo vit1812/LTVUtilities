@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct LTVLog {
+public struct LTVLog {
     
-    static func log(_ items: Any...) {
+    public static func log(_ items: Any...) {
         #if DEBUG
         print(items)
         #endif
