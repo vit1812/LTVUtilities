@@ -22,6 +22,11 @@ public struct LTVUserDefault<T> {
         }
     }
     
+    public init(key: String, defaultValue: T) {
+        self.key = key
+        self.defaultValue = defaultValue
+    }
+    
 }
 
 // MARK: example
